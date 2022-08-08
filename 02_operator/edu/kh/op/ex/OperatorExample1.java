@@ -21,7 +21,7 @@ public class OperatorExample1 {
 		int input2 = sc.nextInt();
 		
 		//5 + 3 = 8
-		System.out.println(input1 + "+" + input2 + "=" + (input1+input2));
+		System.out.println(input1 + " + " + input2 + " = " + (input1+input2));
 		
 		//5 - 3 = 2
 		System.out.printf("%d - %d = %d \n", input1, input2, (input1-input2));
