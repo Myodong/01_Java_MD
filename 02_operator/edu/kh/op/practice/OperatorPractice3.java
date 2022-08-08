@@ -26,7 +26,22 @@ public class OperatorPractice3 {
 		System.out.print("정수 입력 :");
 		int input3 = sc.nextInt();
 		String result3 = (input3 > 0) ? "양수입니다." : (input3 == 0) ? "0입니다." : "음수입니다.";
-		System.out.println(result3);		
+		System.out.println(result3);
+		
+		System.out.println("---------------------------------------------------");
+	
+	
+	      System.out.print("정수 입력 : ");
+	       int input = sc.nextInt();
+	       
+	      String result4 = (input == 0) ? "0" : (input > 0 ? "양수" : "음수");
+	      System.out.println(result4+"입니다.");
+	      
+		
+		
+		
+		
+		
 	}
 
 }
