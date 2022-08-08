@@ -31,7 +31,7 @@ public class OperatorPractice4 {
 		
 		System.out.println("합계 : "+ (input1 + input2 +input3 ));
 		System.out.println("평균  : "+ ((input1 + input2 +input3 )/3));
-		String result1 = (((input1 + input2 +input3 )/3) > 60) ? "불합격 입니다." : "합격 입니다.";
+		String result1 = (((input1 + input2 +input3 )/3) > 60) ? "불합격 입니다." : "합격 입니다.";//과목당40정 이상 못구함
 		System.out.println(result1);
 
 	

@@ -29,20 +29,20 @@ public class OperatorExample5 {
 		System.out.println("a를 2로 나눴을 때의 몫 : "+a);//0
 		System.out.println("-----------------------------------");
 
-		//삼항 연산자 : 조건식 ? true인 경우 : false인경우
-		// * 조건식 : 연산 결과가 true/false인 식
-		//						(비교, 논리, 논리부정)
+/*		삼항 연산자 : 조건식 ? true인 경우 : false인경우
+		 - 조건식 : 연산 결과가 true/false인 식
+						(비교, 논리, 논리부정)*/
 		
 		//스캐너 생성
 		Scanner sc = new Scanner(System.in);
-		// 입력 받은 정수가 짝수인지, 홀수인지 판별
+/*		 입력 받은 정수가 짝수인지, 홀수인지 판별
 		
-		//ex)
-		// 정수 입력 : 4
-		// 짝수 입니다.
+		ex)
+		 정수 입력 : 4
+		 짝수 입니다.
 		
-		// 정수 입력 : 5
-		// 홀수 입니다.
+		 정수 입력 : 5
+		 홀수 입니다.*/
 		System.out.println("정수 입력 :");
 		int input = sc.nextInt();
 		
@@ -52,9 +52,11 @@ public class OperatorExample5 {
 		String result = (input % 2 == 0) ? "짝수입니다." : "홀수입니다.";
 		System.out.println(result);
 		
-		//sc.next() : 한 단어 입력, 띄아쓰기 미포함
-		//sc.nextLine() : 한 문장(한줄) 입력, 띄어쓰기 포함
-		// -엔터가 입력 종료를 
+/* 		sc.next() : 한 단어 입력, 띄아쓰기 미포함
+		sc.nextLine() : 한 문장(한줄) 입력, 띄어쓰기 포함
+		 -엔터가 입력 종료를 
+
+*/
 	}
 
 }
