@@ -46,6 +46,7 @@ public class ConditionExample {
 
 		System.out.println("정수 입력 : ");
 		int input = sc.nextInt();
+		
 		if (input % 2 == 1) {// 홀수인 경우
 			System.out.println("홀수 입니다.");
 		} else {
