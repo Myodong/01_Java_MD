@@ -287,7 +287,7 @@ public class ConditionPractice {
 총점 : 61.0
 Fail [점수 미달]
   
-  	[실행 화면 2]
+[실행 화면 2]
 중간 고사 점수 : 80
 기말 고사 점수 : 90
 과제 점수 : 50
