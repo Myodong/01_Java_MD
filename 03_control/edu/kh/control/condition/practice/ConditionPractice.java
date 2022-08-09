@@ -163,55 +163,58 @@ public class ConditionPractice {
 99월은 잘못 입력된 달입니다.
 */		
 /***내가 푼 문제***/	
-//		Scanner sc = new Scanner(System.in);
-//		System.out.print("1~12 사이의 정수 입력 : ");
-//		int input1 = sc.nextInt();
-//		String result;
-//		
-//		switch (input1) {
-//		case 1: result = "1월은 31까지 있습니다.";break;
-//		case 2: result = "2월은 30까지 있습니다.";break;
-//		case 3: result = "3월은 31까지 있습니다.";break;
-//		case 4: result = "4월은 30까지 있습니다.";break;
-//		case 5: result = "5월은 30까지 있습니다.";break;
-//		case 6: result = "6월은 31까지 있습니다.";break;
-//		case 7: result = "7월은 30까지 있습니다.";break;
-//		case 8: result = "8월은 31까지 있습니다.";break;
-//		case 9: result = "9월은 30까지 있습니다.";break;
-//		case 10: result = "10월은 31까지 있습니다.";break;
-//		case 11: result = "11월은 30까지 있습니다.";break;
-//		case 12: result = "12월은 31까지 있습니다.";break;
-//		default: System.out.printf("%d월은 잘못 입력된 달입니다. \n", input1);
-//		}
-//		System.out.println(result);
+		Scanner sc = new Scanner(System.in);
+		System.out.print("1~12 사이의 정수 입력 : ");
+		int input1 = sc.nextInt();
+		
+		
+		
+//		String result; 이상태로는 초기화가 안됨 값이 없기때문에 마지막에 오류가남
+		String result ="";//빈칸을 넣어서 빈값이라도 나오게		
+		switch (input1) {
+		case 1: result = "1월은 31까지 있습니다.";break;
+		case 2: result = "2월은 28까지 있습니다.";break;
+		case 3: result = "3월은 31까지 있습니다.";break;
+		case 4: result = "4월은 30까지 있습니다.";break;
+		case 5: result = "5월은 30까지 있습니다.";break;
+		case 6: result = "6월은 31까지 있습니다.";break;
+		case 7: result = "7월은 30까지 있습니다.";break;
+		case 8: result = "8월은 31까지 있습니다.";break;
+		case 9: result = "9월은 30까지 있습니다.";break;
+		case 10: result = "10월은 31까지 있습니다.";break;
+		case 11: result = "11월은 30까지 있습니다.";break;
+		case 12: result = "12월은 31까지 있습니다.";break;
+		default: System.out.printf("%d월은 잘못 입력된 달입니다. \n", input1);
+		}
+		System.out.println(result);
 
-/*내 문제점: 너무 어렵개 생각해서printf를 사용하려고함 /result값이 초기화 안됨 */		
+/*내 문제점: 너무 어렵개 생각함 printf를 사용하려고함 /result값이 초기화 안됨 */		
 	
 /***강사님 예시1***/	
 	
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.print("1~12 사이 정수 입력 : ");
-		int month = sc.nextInt();
-		
-		// 30일 : 4 6 9 11
-		// 31일 : 1 3 5 7 8 10 12
-		// 28일 : 2
-		switch(month) {
-		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-			System.out.println(month + "월은 31일 까지 있습니다.");
-			break;
-			
-		case 4: case 6: case 9: case 11:
-			System.out.println(month + "월은 30일 까지 있습니다.");
-			break;
-		
-		case 2:
-			System.out.println(month + "월은 28일 까지 있습니다.");
-			break;
-			
-		default: System.out.println(month + "월은 잘못 입력된 달입니다.");
-		}
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.print("1~12 사이 정수 입력 : ");
+//		int month = sc.nextInt();
+//		
+//		// 30일 : 4 6 9 11
+//		// 31일 : 1 3 5 7 8 10 12
+//		// 28일 : 2
+//		switch(month) {
+//		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+//			System.out.println(month + "월은 31일 까지 있습니다.");
+//			break;
+//			
+//		case 4: case 6: case 9: case 11:
+//			System.out.println(month + "월은 30일 까지 있습니다.");
+//			break;
+//		
+//		case 2:
+//			System.out.println(month + "월은 28일 까지 있습니다.");
+//			break;
+//			
+//		default: System.out.println(month + "월은 잘못 입력된 달입니다.");
+//		}
 
 	}
 /////////////////////////////////////////////////////////////////////////////////
