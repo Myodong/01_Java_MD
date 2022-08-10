@@ -17,7 +17,9 @@ public class LoopPracticeRun {
 //		lp.Practice7();
 //		lp.Practice8();
 //		lp.Practice9();
-		lp.Practice10();
+//		lp.Practice10();
+//		lp.Practice11();
+		lp.Practice12();
 		
 		
 		

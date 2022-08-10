@@ -245,7 +245,7 @@ ex.
 		
 		for (int x = 1; x <= num1; x++) {
 			for (int t = 1; t <= num1-x; t++) {	
-				System.out.println(" ");
+				System.out.print(" ");
 			}
 			for (int i = 1; i <= x; i++) {
 				System.out.print("*");
@@ -297,8 +297,18 @@ ex.
  *****
 ******* 		
 */
-		
-		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int num1=sc.nextInt();
+				
+				for (int x = 0; x <=num1; x++) {
+					for (int t = 1; t <=num1-x; t++) {
+						System.out.print(" ");
+					}
+					for (int i = 1; i <=x*2-1; i++) {
+						System.out.print("*");
+					}System.out.println();
+				}
 		
 		
 		
@@ -307,10 +317,49 @@ ex.
 //////////////////////////////////////////////////////////////////////////
 
 	public void Practice12() {	
+/*
+다음과 같은 실행 예제를 구현하세요.
+
+ex.
+정수 입력 : 5
+*****
+*   *
+*   *
+*   *
+*****		
+ */
+		Scanner sc = new Scanner(System.in);
+		System.out.print("12정수 입력 : ");
+		int num1 = sc.nextInt();
+		
+		for (int x = 1; x <=num1 ; x++) {
+			for (int t = 1; t <=x; t++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
 	}
 //////////////////////////////////////////////////////////////////////////
 
 	public void Practice13() {	
+/*
+1부터 사용자에게 입력 받은 수까지 중에서
+	1) 2와 3의 배수를 모두 출력하고
+	2) 2와 3의 공배수의 개수를 출력하세요.
+* ‘공배수’는 둘 이상의 수의 공통인 배수라는 뜻으로 어떤 수를 해당 수들로 나눴을 때
+   모두 나머지가 0이 나오는 수
+
+ex.
+자연수 하나를 입력하세요 : 15
+2 3 4 6 8 9 10 12 14 15
+count : 2		
+ */
+		
+		
+		
+		
+		
 	}
 
 }
