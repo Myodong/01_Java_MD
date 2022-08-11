@@ -33,7 +33,7 @@ ex.
 		}
 	}
 	
-/*########################강사님 문제풀이########################*/	
+/*##############################강사님 문제풀이##############################*/	
 	
 	public void practice1_1() {
 		
@@ -75,7 +75,7 @@ ex.
 		}
 	}
 	
-/*########################강사님 문제풀이########################*/	
+/*##############################강사님 문제풀이##############################*/
 	public void practice2_1() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -114,7 +114,7 @@ ex.
 		}
 		System.out.print("= " + sum);
 		}
-/*########################강사님 문제풀이########################*/	
+/*##############################강사님 문제풀이##############################*/
 	public void practice3_() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -171,7 +171,7 @@ ex.
 					System.out.print(i+" ");}
 			}			
 		}
-/*########################강사님 문제풀이########################*/	
+/*##############################강사님 문제풀이##############################*/	
 	public void Practice4_1(){
 		
 		Scanner sc = new Scanner(System.in);
@@ -261,7 +261,7 @@ ex.
 		
 		}
 	}
-/*########################강사님 문제풀이########################*/
+/*##############################강사님 문제풀이##############################*/
 	
 	public void practice5_1() {
 		
@@ -299,7 +299,7 @@ ex.
 		
 	}
 //내문제점 : 문제 이해 잘못함 9단까지 출력해야함 
-/*########################강사님 문제풀이########################*/
+/*##############################강사님 문제풀이##############################*/
 	public void Practice6_1() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -347,10 +347,23 @@ ex.
 			}System.out.println();
 			
 		}
-		
-		
-		
 	}
+/*##############################강사님 문제풀이##############################*/
+	public void practice7_1() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int row = 1; row <= num; row++) {
+			for(int col = 1; col <= row; col++) {				
+				System.out.print("*");
+			}
+			
+			System.out.println(); // 줄바꿈
+		}
+	}	
+	
 //////////////////////////////////////////////////////////////////////////
 
 	public void Practice8() {	
@@ -377,6 +390,24 @@ ex.
 		}
 	
 	}
+/*##############################강사님 문제풀이##############################*/
+	
+	public void practice8_1() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int row = num; row > 0; row--) {
+			
+			for(int col = row; col > 0; col--) {
+				System.out.print("*");
+			}
+			
+			System.out.println(); // 줄 바꿈
+		}
+	}
+
+	
 //////////////////////////////////////////////////////////////////////////
 
 	public void Practice9() {	
@@ -404,7 +435,7 @@ ex.
 				
 	}
 	
-/****강사님 문제풀이****/
+/*##############################강사님 문제풀이##############################*/
 	
 	public void Practice9_1() {
 		
@@ -413,7 +444,7 @@ ex.
 		int input= sc.nextInt();
 		
 		for (int row = 1; row <=input; row++) {
-//for문을 이용한 풀이		
+// [for] 문을 이용한 풀이		
 			
 //			for (int i = input-row; i >=1; i--) {
 //			for (int i = input-1; i >=row; i--) {
@@ -427,7 +458,7 @@ ex.
 
 		
 			
-// if문을 이용한 풀이
+// [if] 문을 이용한 풀이
 			
 			for(int col = 1 ; col <= input ; col++) {
 				if(col <= input - row) {
@@ -469,7 +500,7 @@ ex.
 	}	
 	}
 	
-/****강사님 문제풀이****/	
+/*##############################강사님 문제풀이##############################*/	
 	public void Practice10_1() {
 		
 		Scanner sc = new Scanner(System.in);
@@ -492,11 +523,24 @@ ex.
 			}System.out.println();//줄바꿈
 			}
 	
+		System.out.println("====================");
 //방법 2 (if문 사용하기)			
 		
-		//다시작성
+		for(int row=1; row<= input*2-1; row++) {      
+    	  if(row < input) {
+             for(int col=1; col <= row; col++) {
+                System.out.print("*");
+             } 
+          } else {
+             for(int col=input ; col > row-input; col--) {
+                System.out.print("*");
+             }
+          } 
+          System.out.println();
+       }
 		
 	}
+		
 //////////////////////////////////////////////////////////////////////////
 
 	public void Practice11() {	
@@ -524,7 +568,7 @@ ex.
 				}
 				}
 	
-/****강사님 문제풀이****/	
+/*##############################강사님 문제풀이##############################*/	
 	
 	public void Practice11_1() {
 		
@@ -533,7 +577,8 @@ ex.
 		int input= sc.nextInt();
 		
 		for (int row = 1; row <=input; row++) {
-//for문을 이용한 풀이		
+
+// [for] 문을 이용한 풀이		
 			
 //			for (int i = input-row; i >=1; i--) {
 			for (int i = input-1; i >=row; i--) {
@@ -543,11 +588,13 @@ ex.
 			for (int col = 1; col <=row*2-1; col++) {
 				System.out.print("*");
 			}	System.out.println();
+			}			System.out.println(); // 줄바꿈
+			
 			}
 	
 				
 			
-// if문을 이용한 풀이
+// [if] 문을 이용한 풀이
 			
 //			for(int col = 1 ; col <= input*2-1 ; col++) {
 //				if(col <= input - row|| input+row<=col) {
@@ -559,7 +606,7 @@ ex.
 //			System.out.println(); // 줄바꿈
 //	
 //	}
-}
+//	}
 		
 
 //////////////////////////////////////////////////////////////////////////
@@ -578,16 +625,14 @@ ex.
  */
 		
 		
-/****강사님 문제풀이****/	
+/*##############################강사님 문제풀이##############################*/	
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("12정수 입력 : ");
 		int input = sc.nextInt();
 		
 		for (int row = 1; row <=input; row++) {
-			
 			for (int col = 1; col <= input; col++) {
-				
 				//첫번째,마지막 줄, 칸일 때만 *출력
 				if (row ==1 ||row == input || col ==1 || col == input) {
 					System.out.print("*");
@@ -616,7 +661,7 @@ ex.
 count : 2		
  */
 		
-/****강사님 문제풀이****/			
+/*##############################강사님 문제풀이##############################*/			
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("자연수 하나를 입력하세여 : ");

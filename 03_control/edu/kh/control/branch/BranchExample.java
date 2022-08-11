@@ -200,16 +200,60 @@ public class BranchExample {
 				}
 						count++;
 			}
-			
-			
-			
-			
-			
-			
+
 		}
 		
+////////////////////////////////////////////////////////////////
+		
+	public void rpsGame() {
+		
+		 // 가위 바위 보 게임
+		   
+		   // 몇판? : 3
+		   
+		   // 1번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 플레이어 승!
+		   //현재 기록 :  1승 0무 0패
+		   
+		   // 2번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  보
+		   // 컴퓨터는 [보]를 선택했습니다.
+		   // 비겼습니다.
+		   // 현재 기록 : 1승 1무 0패
+		   
+		   // 3번째 게임
+		   // 가위/바위/보 중 하나를 입력 해주세요 :  가위
+		   // 컴퓨터는 [바위]를 선택했습니다.
+		   // 졌습니다ㅠㅠ
+		   // 현재 기록 : 1승 1무 1패
 		
 	
+		int ran =(int)(Math.random()* 3);
+		
+		System.out.println(ran);
+		
+		
+	Scanner sc = new Scanner(System.in);
+	int count=1;
 	
-	
-}
+	for (int i = 1; i <= 3; i++) {
+		System.out.println(i +"번째 게임");
+		System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
+		int input =sc.nextInt();
+		if (input > ran) {
+			System.out.println("컴퓨터는 ["+ran+"]를 선택했습니다.");
+			System.out.println("플레이어 승!");
+		}else if (input==ran) {
+			System.out.println("컴퓨터는 ["+ran+"]를 선택했습니다.");
+			System.out.println("비겼습니다");
+
+		}else {
+			System.out.println("컴퓨터는 ["+ran+"]를 선택했습니다.");
+			System.out.println("졌습니다ㅠㅠ");
+}count++;
+System.out.println();
+	}
+	}
+	}
