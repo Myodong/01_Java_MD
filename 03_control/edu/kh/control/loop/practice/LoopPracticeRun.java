@@ -12,14 +12,20 @@ public class LoopPracticeRun {
 //		lp.Practice2();
 //		lp.Practice3();
 //		lp.Practice4();
+//		lp.Practice4_1();
 //		lp.Practice5();
 //		lp.Practice6();
+//		lp.Practice6_1();
 //		lp.Practice7();
 //		lp.Practice8();
 //		lp.Practice9();
+//		lp.Practice9_();
 //		lp.Practice10();
+		lp.Practice10_1();
 //		lp.Practice11();
-		lp.Practice12();
+//		lp.Practice11_1();
+//		lp.Practice12();
+//		lp.Practice13();
 		
 		
 		
