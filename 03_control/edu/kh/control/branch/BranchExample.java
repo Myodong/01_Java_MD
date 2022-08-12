@@ -244,7 +244,7 @@ public class BranchExample {
 			for (int i = 1; i <= input; i++) {
 				System.out.println(i + "번째 게임");
 				System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
-				int result = sc.nextInt();
+				int result = sc.nextInt();//*int를 string으로 바꿔야함
 				
 				System.out.println("컴퓨터는 [" + ran + "]를 선택했습니다.");
 				
@@ -261,6 +261,88 @@ public class BranchExample {
 				System.out.printf("현재 기록 : %d승 %d무 %d패\n",victory,tie,defeat);
 				System.out.println();//줄바꿈
 			}
+	}
+	
+	
+	//내문제점 : switch문 ,boolean , equals 3가지에 대하여 다시 생각해보기
+	
+	
+	/*===============================[ 강사님 풀의 ]===============================*/	
+	
+	public void rpsGame_1() {
+
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("몇판 ?");
+		int round =sc.nextInt();
+		
+		//승/무/페를 기록한 변수 선언 및 0으로 초기화
+		int win =0;
+		int draw =0;
+		int lose =0;
+		
+		for (int i = 1; i <=round; i++) {
+			System.out.println("\n"+i+"번째 게임");
+			System.out.print("가위/바위/보 중 하나를 입력 해주세요 : ");
+
+			String player =sc.next();	
+			
+			//컴퓨터 가위/바위/보 지정구문
+			int ran = (int) (Math.random() * 3);
+			
+			String com =null;//string 기본 값
+//			String com ="";//비여있는 문자열 null과는 다름 
+			//null : 참조하지 않는다.
+			
+			switch (ran) {
+			case 0:com= "가위"; break;
+			case 1:com= "바위"; break;
+			case 2:com= "보"; break;
+			}
+			System.out.printf("컴퓨터는 [%s]를 선택 했습니다. \n", com);
+			
+			// 사용자와 컴퓨터 가위,바위,보 승패 판별
+			
+			if (player.equals(com)) {
+				System.out.println("비겼습니다");
+				draw++;
+			}else {
+				
+				// 사용자 - 컴퓨터
+				// 가위   -  보
+				// 바위   -  가위
+				//   보   -  바위
+				
+				//사용자가 이기는 경우에 true가 되는 상황을 미리 변수로 선언
+				boolean win1 = player.equals("가위")&& com.equals("보");
+				boolean win2 = player.equals("바위")&& com.equals("가위");
+				boolean win3 = player.equals("보")&& com.equals("바위");
+				
+				
+				if (win1 || win2||win3) {//이기는 경우
+					System.out.println("플레이어 승!");
+					win++;
+				}else {//지는경우
+					System.out.println("졌습니다ㅠㅠ");
+					lose++;
+				}
+			}
+			System.out.printf("현재 기록 : %d승 %d무 %d패\n",win,draw,lose);			
+		}
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	
 	
