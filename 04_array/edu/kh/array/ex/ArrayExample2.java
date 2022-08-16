@@ -95,11 +95,78 @@ public class ArrayExample2 {
 			}
 			
 			}
-		
+/*#############################################################################*/		
 		
 			
+		public void ex3() {
 			
-		
+			// 3행 3열짜리 int 2차원배열에 난수(0~9)를 대입
+			// 단, 각각의 마지막 행/열은 각 행/열의 합
+			// 마지막 행, 마지막 열은 전체 난수의 합
+			
+			// 8 			5    8+5 =13
+			// 3 			7	 3+7 =10
+			// 8+3=(11) 5+7=(12) 11+12=23
+			
+			int[][]arr = new int[3][3];
+			
+			for (int row = 0; row < arr.length-1; row++) {
+				
+				for (int col = 0; col < arr[row].length-1; col++) {
+					//난수 생성 및 대입
+					int ran = (int)(Math.random()*10); // 0~9 사이 난수
+					arr[row][col]= ran;
+					
+					//각 행의 마지막 열 
+					arr[row][arr[row].length-1] +=ran; // 생성된 난수 누적
+					
+					//각 열의 마지막 행 
+					arr[arr.length-1][col] +=ran; // 생성된 난수 누적
+					
+					//마지막 행, 마지막 열
+					arr[arr.length-1][arr[row].length-1]+=ran;
+				}
+				
+			}
+			//출력용
+			for (int row = 0; row < arr.length; row++) {
+				for (int col = 0; col < arr[row].length; col++) {
+					System.out.printf("%3d", arr[row][col]);
+				}
+				System.out.println();//줄바꿈
+			}
+			
+			
+		}
+/*#############################################################################*/		
+	
+		public void ex4() {
+			
+			// 가변 배열 
+			// - 2차 배열 할당 시
+			//   마지막 배열 차수(열)의 크기를 지정하지 않고할당
+			
+			// - 할당이후 각 행에 각각의 1차원 배열을 참조하게 만듦.
+			
+			
+			int[][] arr= new int[5][];
+			
+			
+			arr[0] = new int[3];
+			arr[1] = new int[4];
+			arr[2] = new int[5];
+			arr[3] = new int[2];
+			arr[4] = new int[1];
+
+			for (int row = 0; row < arr.length; row++) {
+				
+				for (int col = 0; col < arr[row].length; col++) {
+					System.out.print(arr[row][col]+" ");
+				}
+				System.out.println();//줄바꿈
+			}
+			
+		}
 		
 	
 	

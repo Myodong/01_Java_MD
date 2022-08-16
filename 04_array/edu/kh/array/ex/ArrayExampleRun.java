@@ -4,7 +4,7 @@ public class ArrayExampleRun {
 
 	public static void main(String[] args) {
 
-		ArrayExample arrayEX =new ArrayExample();	
+//		ArrayExample arrayEX =new ArrayExample();	
 		
 		
 //		arrayEX.ex1();
@@ -25,7 +25,9 @@ public class ArrayExampleRun {
 		
 		
 //		arrayEX2.ex1();
-		arrayEX2.ex2();
+//		arrayEX2.ex2();
+//		arrayEX2.ex3();
+		arrayEX2.ex4();
 		
 		
 		
