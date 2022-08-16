@@ -18,7 +18,22 @@ public class ArrayExampleRun {
 //		arrayEX.createlottoNumber();
 //		arrayEX.ex9();
 //		arrayEX.ex10();
-		arrayEX.ex11();
+//		arrayEX.ex11();
+		
+		
+		ArrayExample2 arrayEX2 =new ArrayExample2();	
+		
+		
+//		arrayEX2.ex1();
+		arrayEX2.ex2();
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 
