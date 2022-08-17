@@ -1,4 +1,4 @@
-package edu.kh.op.practice;
+   package edu.kh.op.practice;
 import java.util.Scanner;
 public class OperatorPractice3 {
 	public static void main(String[] args) {
