@@ -331,7 +331,7 @@ public class BranchExample {
 			System.out.printf("현재 기록 : %d승 %d무 %d패\n",win,draw,lose);			
 		}
 				
-		
+		 
 		
 		
 		
