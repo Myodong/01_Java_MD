@@ -16,7 +16,7 @@ public class ArrayPractice {
 		for (int i = 0; i < 9; i++) {
 			System.out.print(arr[i]);
 			if (arr[i]%2) {
-				  
+				     
 			}
 		}
 		
