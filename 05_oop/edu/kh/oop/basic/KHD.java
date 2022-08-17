@@ -1,4 +1,4 @@
-package edu.kh.oop.basic;
+0package edu.kh.oop.basic;
 
 
 // 클래스 : 객체가 되었을때 가지고 있을 속성, 기능을 정의(작성)한 문서
@@ -10,7 +10,7 @@ public class KHD {
 	int age = 29;
 	String birthday="1994-04-26";
 	prvate Srring= "password";
-			//prvatedf 해강칼ㅡㅁㄴ
+			//prvatedf 해강칼ㅡㅁㄴ]
 	
 	//객체가 가지고 있는 기능
 	public void study() {

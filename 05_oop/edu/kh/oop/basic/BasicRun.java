@@ -13,6 +13,8 @@ public class BasicRun {
 		System.out.println("나이 : "+김효동.age);
 		System.out.println("생년월일 : "+김효동.birthday);
 		
+		
+		
 		// 비밀번호를 볼 수 있는 기능을 호출 == 간접 접근 방법
 		김효동.showPassword();
 		
