@@ -13,6 +13,9 @@ public class BasicRun {
 		System.out.println("나이 : "+김효동.age);
 		System.out.println("생년월일 : "+김효동.birthday);
 		
+//		System.out.println("비밀번호 : "+김효동.password);
+//		 The field BDH.password is not visible
+//		직접적으로는 볼수없다.
 		
 		
 		// 비밀번호를 볼 수 있는 기능을 호출 == 간접 접근 방법
