@@ -7,8 +7,8 @@ public class ArrayPracticeRun {
 		
 		ArrayPractice ap =new ArrayPractice();
 		
-		
-		
+		  
+		ap.ex1();
 	}
 
 }
