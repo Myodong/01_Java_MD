@@ -1,5 +1,6 @@
 package edu.kh.array.practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayPractice {
@@ -123,7 +124,7 @@ public class ArrayPractice {
 			System.out.print("입력 " + i + " : ");
 			int input= sc.nextInt();
 			arr[i] = input;
-		}	
+		}	//저장 끝 검색 시작
 		System.out.print("검색할 값 : ");
 		int num =sc.nextInt();
 		boolean flag=true;
@@ -144,8 +145,72 @@ public class ArrayPractice {
 
 
 /*#############################################################################*/
+/*실습문제5
+	문자열을 입력 받아 문자 하나 하나를 char배열에 대입하고
+	검색할 문자가 문자열에 몇 개 들어가 있는지, 몇 번째 인덱스에 위치하는지 인덱스를 출력하세요.
 	
+	[실행 화면]
+	문자열 : application
+	문자 : i
+	application에 i가 존재하는 위치(인덱스) : 4 8
+	i 개수 : 2
+--------------------------------------------------------------------/
+/	* 문자열.length() : 문자열의 길이								/
+/		ex) String str = “abcd”;									/
+/		System.out.println(str.length()); // 4 출력					/
+/																	/
+/	* 문자열.charAt(인덱스번호) :									/
+/	  문자열에서 해당 인덱스 번째 문자 하나를 얻어옴(char 자료형)	/
+/		ex) String str = “abcd”;									/
+/		char ch = str.charAt(3); // ‘d’								/
+/		System.out.println(ch); // ‘d’ 출력 						/
+--------------------------------------------------------------------/
+ */
 	
+	public void ex5() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 : ");
+		String str= sc.next();
+		char[] arr = new char[str.length()];//문자 수만큼 인덱스수 생성
+		
+		
+		for (int i = 0; i < arr.length; i++) {//인덱스에 문자 값 저장
+			char ch = str.charAt(i);
+			arr[i] = ch;
+		}
+		System.out.print("문자 : ");
+		char message = sc.next().charAt(0);//문자열 중 0번째 인덱스 문자 하나를 얻어옴
+		int sum=0;
+		
+		for (int x = 0; x < arr.length; x++) {
+			
+			if (arr[x]==message) {
+			System.out.printf("%s에 %s가 존재하는 위치(인덱스) : ",str,message);	
+			}
+			
+			
+			
+			
+		}
+		
+		
+
+//		char ch = str.charAt(0);//문자열 중 0인덱스 문자 출력
+//		System.out.println(ch);
+		
+
+		
+		
+		
+	
+		
+		
+		System.out.println(Arrays.toString(arr)); //배열에 저장된 값 한줄 출력
+		System.out.println(str.length()); //문자 수
+		
+		
+	}
 /*===============================[ 강사님 풀의 ]===============================*/	
 
 
