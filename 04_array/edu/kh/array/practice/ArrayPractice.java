@@ -172,7 +172,7 @@ public class ArrayPractice {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("문자열 : ");
 		String str= sc.next();
-		char[] arr = new char[str.length()];//문자 수만큼 인덱스수 생성
+		char[] arr = new char[str.length()];//문자 수만큼 인덱스 생성
 		
 		
 		for (int i = 0; i < arr.length; i++) {//인덱스에 문자 값 저장
@@ -181,39 +181,141 @@ public class ArrayPractice {
 		}
 		System.out.print("문자 : ");
 		char message = sc.next().charAt(0);//문자열 중 0번째 인덱스 문자 하나를 얻어옴
-		int sum=0;
+		int sum=0; // 검색 문자 합계
+		System.out.print(str+"에 "+ message + "가 존재하는 위치(인덱스) : ");
 		
-		for (int x = 0; x < arr.length; x++) {
-			
+		for (int x = 0; x < arr.length; x++) {//검색 문자 인덱스에서 찾기
 			if (arr[x]==message) {
-			System.out.printf("%s에 %s가 존재하는 위치(인덱스) : ",str,message);	
+				System.out.print(x + " ");
+				sum++;
 			}
+		}System.out.println();//줄바꿈
+		System.out.printf("%s 개수 : %d\n", message,sum );
 			
-			
-			
-			
-		}
-		
-		
-
-//		char ch = str.charAt(0);//문자열 중 0인덱스 문자 출력
-//		System.out.println(ch);
-		
-
-		
-		
-		
-	
-		
-		
-		System.out.println(Arrays.toString(arr)); //배열에 저장된 값 한줄 출력
-		System.out.println(str.length()); //문자 수
-		
-		
 	}
 /*===============================[ 강사님 풀의 ]===============================*/	
 
 
 /*#############################################################################*/
+/*실습문제6
+	사용자가 배열의 길이를 직접 입력하여 그 값만큼 정수형 배열을 선언 및 할당하고
+	배열의 크기만큼 사용자가 직접 값을 입력하여 각각의 인덱스에 값을 초기화 하세요.
+	그리고 배열 전체 값을 나열하고 각 인덱스에 저장된 값들의 합을 출력하세요.
+	
+	[실행 화면]
+	정수 : 5
+	배열 0번째 인덱스에 넣을 값 : 4
+	배열 1번째 인덱스에 넣을 값 : -4
+	배열 2번째 인덱스에 넣을 값 : 3
+	배열 3번째 인덱스에 넣을 값 : -3
+	배열 4번째 인덱스에 넣을 값 : 2
+	4 -4 3 -3 2
+	총 합 : 2
+ */
+	public void ex6() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 : ");
+		int input = sc.nextInt();
+		int[] arr = new int[input];	
+		int sum=0;//총 합 
+		
+		for (int i = 0; i < input; i++) {
+			System.out.print("배열 " + i + "번째 인덱스에 넣을 값 : ");
+			int num= sc.nextInt();
+			arr[i] = num;	
+			sum+=num;
+		}
+		for (int x = 0; x < input; x++) {
+			System.out.print(arr[x] + " ");
+		}System.out.println();// 줄 바꿈
+		System.out.println("총합 : "+sum);
+		
+		
+	}
+	
 
+/*===============================[ 강사님 풀의 ]===============================*/	
+
+
+/*#############################################################################*/
+/*실습문제7
+	주민등록번호를 입력 받아 char 배열에 저장한 후 출력하세요.
+	단, char 배열 저장 시 성별을 나타내는 숫자 이후부터 *로 저장하세요.
+	
+	[실행 화면]
+	주민등록번호(-포함) : 123456-1234567
+	123456-1******
+ */
+	public void ex7() {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("주민등록번호(-포함) : ");//주민 14자리 입력 -포함
+		String str= sc.next();
+		char[] arr = new char[str.length()];//문자 수만큼 인덱스 생성
+		
+		
+		for (int i = 0; i < arr.length; i++) {//인덱스에 문자 값 저장
+			char ch = str.charAt(i);
+			arr[i] = ch;
+		}
+		for (int x = 0; x < arr.length; x++) {
+			if (x<8) {
+				System.out.print(arr[x]);
+			}else {
+				System.out.print("*");
+			}
+		}
+	}
+
+/*===============================[ 강사님 풀의 ]===============================*/	
+
+
+/*#############################################################################*/
+/*실습문제8
+	3 이상인 홀수를 입력 받아 배열의 중간까지는 1부터 1씩 증가하여 오름차순으로 값을 넣고,
+	중간 이후부터 끝까지는 1씩 감소하여 내림차순으로 값을 넣어 출력하세요.
+	단, 입력한 정수가 홀수가 아니거나 3 미만일 경우 “다시 입력하세요”를 출력하고
+	다시 정수를 받도록 하세요.
+	
+	[실행 화면]
+	정수 : 4
+	다시 입력하세요.
+	정수 : -6
+	다시 입력하세요.
+	정수 : 5
+	1, 2, 3, 2, 1
+ */
+	//짝수 && 3미만  다시입력하세요 출력 후 다시 정수받기
+	//홀수 &&
+	
+	public void ex8() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 : ");
+		int input = sc.nextInt();
+		
+		for (int i = 0; i <= input; i++) {
+
+			if (input<3) {
+				System.out.println("");
+			}
+		}
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*===============================[ 강사님 풀의 ]===============================*/	
+
+
+/*#############################################################################*/		
 }
