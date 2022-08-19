@@ -22,9 +22,7 @@ public class UserView {
 	// null이 아닐 경우 == 로그임 o
 	
 	
-	
-	
-	
+
 	// 메뉴 출력 기능(메서드)
 	public void displayMenu() {
 		
