@@ -6,8 +6,9 @@ public class ProblemExampleRun {
 		
 		
 //		pe.ex1();
-		pe.ex1_1();
+//		pe.ex1_1();
 //		pe.ex1_2();
+		pe.ex2();
 
 		
 		
