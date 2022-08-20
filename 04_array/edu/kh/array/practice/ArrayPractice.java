@@ -15,18 +15,19 @@ public class ArrayPractice {
 	짝수 번째 인덱스 합 : 25		
 */
 	public void ex1() {
-		int sum= 0;
-		
-		int[] arr = new int[9];	
-		for (int i = 0; i <arr.length; i++) {
-			int num=arr[i]+i+1;
+		int sum = 0;
+
+		int[] arr = new int[9];
+		for (int i = 0; i < arr.length; i++) {
+			int num = arr[i] + i + 1;
 			System.out.print(num);
 
 			if (i % 2 == 0) {
-				sum +=num;
+				sum += num;
 			}
-		}System.out.println();
-		System.out.println("짝수 번째 인덱스 합 : " +sum);	
+		}
+		System.out.println();
+		System.out.println("짝수 번째 인덱스 합 : " + sum);	
 	}
 /*===============================[ 강사님 풀의 ]===============================*/
 	
@@ -44,16 +45,17 @@ public class ArrayPractice {
 		
 		int[] arr = new int[9];
 		int sum = 0;
-		
+
 		for (int i = arr.length; i > 0; i--) {
-			int num = arr[i-1]+i; 
-			
-			System.out.print(num +" ");
-			
-			if (i%2==0) {
-				sum+=i;
-			} 
-		}System.out.println("\n홀수 번째 인덱스 합 : "+sum);
+			int num = arr[i - 1] + i;
+
+			System.out.print(num + " ");
+
+			if (i % 2 == 0) {
+				sum += i;
+			}
+		}
+		System.out.println("\n홀수 번째 인덱스 합 : " + sum);
 			
 	}
 /*===============================[ 강사님 풀의 ]===============================*/
@@ -77,12 +79,12 @@ public class ArrayPractice {
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.print("양의 정수 : ");
-		int input= sc.nextInt();
+		int input = sc.nextInt();
 		int[] arr = new int[input];
-		
+
 		for (int i = 0; i < input; i++) {
-			int num=arr[i]+i+1;
-			System.out.print(num +" ");
+			int num = arr[i] + i + 1;
+			System.out.print(num + " ");
 		}
 	}
 
@@ -115,30 +117,30 @@ public class ArrayPractice {
  */
 	
 	public void ex4() {
-		
-		
-		Scanner sc = new Scanner(System.in);
-		int[] arr = new int[5];		
-		
-		for (int i = 0; i <=4; i++) {	//정수 입력 및 저장
-			System.out.print("입력 " + i + " : ");
-			int input= sc.nextInt();
-			arr[i] = input;
-		}	//저장 끝 검색 시작
-		System.out.print("검색할 값 : ");
-		int num =sc.nextInt();
-		boolean flag=true;
 	
-		for (int x = 0; x < arr.length; x++) {			
-			if(arr[x] == num) {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[5];
+	
+		for (int i = 0; i <= 4; i++) { // 정수 입력 및 저장
+			System.out.print("입력 " + i + " : ");
+			int input = sc.nextInt();
+			arr[i] = input;
+		} // 저장 끝 검색 시작
+		System.out.print("검색할 값 : ");
+		int num = sc.nextInt();
+		boolean flag = true;
+	
+		for (int x = 0; x < arr.length; x++) {
+			if (arr[x] == num) {
 				System.out.println(x + "번째 인덱스에 존재합니다.");
-				flag=false; //flag 값 변경 검색중지
+				flag = false; // flag 값 변경 검색중지
 				break;
-			}	
 			}
-			if(flag) System.out.println("일치하는 값이 존재하지 않습니다.");
-			}
-		
+		}
+		if (flag)
+			System.out.println("일치하는 값이 존재하지 않습니다.");
+	}
+			
 		
 	
 /*===============================[ 강사님 풀의 ]===============================*/	
@@ -168,30 +170,30 @@ public class ArrayPractice {
  */
 	
 	public void ex5() {
-		
+	
 		Scanner sc = new Scanner(System.in);
 		System.out.print("문자열 : ");
-		String str= sc.next();
-		char[] arr = new char[str.length()];//문자 수만큼 인덱스 생성
-		
-		
-		for (int i = 0; i < arr.length; i++) {//인덱스에 문자 값 저장
+		String str = sc.next();
+		char[] arr = new char[str.length()];// 문자 수만큼 인덱스 생성
+	
+		for (int i = 0; i < arr.length; i++) {// 인덱스에 문자 값 저장
 			char ch = str.charAt(i);
 			arr[i] = ch;
 		}
 		System.out.print("문자 : ");
-		char message = sc.next().charAt(0);//문자열 중 0번째 인덱스 문자 하나를 얻어옴
-		int sum=0; // 검색 문자 합계
-		System.out.print(str+"에 "+ message + "가 존재하는 위치(인덱스) : ");
-		
-		for (int x = 0; x < arr.length; x++) {//검색 문자 인덱스에서 찾기
-			if (arr[x]==message) {
+		char message = sc.next().charAt(0);// 문자열 중 0번째 인덱스 문자 하나를 얻어옴
+		int sum = 0; // 검색 문자 합계
+		System.out.print(str + "에 " + message + "가 존재하는 위치(인덱스) : ");
+	
+		for (int x = 0; x < arr.length; x++) {// 검색 문자 인덱스에서 찾기
+			if (arr[x] == message) {
 				System.out.print(x + " ");
 				sum++;
 			}
-		}System.out.println();//줄바꿈
-		System.out.printf("%s 개수 : %d\n", message,sum );
-			
+		}
+		System.out.println();// 줄바꿈
+		System.out.printf("%s 개수 : %d\n", message, sum);
+	
 	}
 /*===============================[ 강사님 풀의 ]===============================*/	
 
@@ -217,21 +219,21 @@ public class ArrayPractice {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("정수 : ");
 		int input = sc.nextInt();
-		int[] arr = new int[input];	
-		int sum=0;//총 합 
-		
+		int[] arr = new int[input];
+		int sum = 0;// 총 합
+
 		for (int i = 0; i < input; i++) {
 			System.out.print("배열 " + i + "번째 인덱스에 넣을 값 : ");
-			int num= sc.nextInt();
-			arr[i] = num;	
-			sum+=num;
+			int num = sc.nextInt();
+			arr[i] = num;
+			sum += num;
 		}
 		for (int x = 0; x < input; x++) {
 			System.out.print(arr[x] + " ");
-		}System.out.println();// 줄 바꿈
-		System.out.println("총합 : "+sum);
-		
-		
+		}
+		System.out.println();// 줄 바꿈
+		System.out.println("총합 : " + sum);
+
 	}
 	
 
@@ -250,19 +252,18 @@ public class ArrayPractice {
 	public void ex7() {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("주민등록번호(-포함) : ");//주민 14자리 입력 -포함
-		String str= sc.next();
-		char[] arr = new char[str.length()];//문자 수만큼 인덱스 생성
-		
-		
-		for (int i = 0; i < arr.length; i++) {//인덱스에 문자 값 저장
+		System.out.print("주민등록번호(-포함) : ");// 주민 14자리 입력 -포함
+		String str = sc.next();
+		char[] arr = new char[str.length()];// 문자 수만큼 인덱스 생성
+
+		for (int i = 0; i < arr.length; i++) {// 인덱스에 문자 값 저장
 			char ch = str.charAt(i);
 			arr[i] = ch;
 		}
 		for (int x = 0; x < arr.length; x++) {
-			if (x<8) {
+			if (x < 8) {
 				System.out.print(arr[x]);
-			}else {
+			} else {
 				System.out.print("*");
 			}
 		}
@@ -286,8 +287,8 @@ public class ArrayPractice {
 	정수 : 5
 	1, 2, 3, 2, 1
  */
-	// 짝수 && 3미만  다시입력하세요 출력 후 다시 정수받기
-	// 홀수 && 3이상 입력
+	// 짝수 && 3미만  "다시 입력하세요" 출력 후 다시 정수받기
+	// 홀수 && 3이상 입력가능 
 	// 입력된 정수의 오름차순으로 출력 중간 이후 내림차순으로 출력 
 	
 	public void ex8() {
@@ -295,33 +296,32 @@ public class ArrayPractice {
 		
 		while (true) {
 			System.out.print("정수 : ");
-		int input = sc.nextInt();
-		int[] arr = new int[input];
-		System.out.println(Arrays.toString(arr));//임시 확인용 인텍스 생성 테스트	
-		
-			if (input>=3 && input/2!=0) {//홀수 && 3이상일때 
-				System.out.println("테스트");//임시 확인용
+			int input = sc.nextInt();
 
-				 for (int i = 0; i < input; i++) {//정수 오름차순/내림차순 출력
-					
+			if (input >= 3 && input % 2 != 0) {// 홀수 && 3이상일때
+				int[] arr = new int[input]; // 입력받은 정수 만큼 인덱스 생성
+
+				for (int i = 0; i <= input / 2; i++) {// 정수 오름차순/변수 저장,출력
+					arr[i] = i + 1;// 인덱스에 변수 저장
+					System.out.print(arr[i] + " ");// 변수 출력
 				}
+				for (int x = input / 2 + 1; x < input; x++) {// 정수 내림차순/변수 저장,출력
+					arr[x] = input - x;// 인덱스에 변수 저장
+					System.out.print(arr[x] + " ");// 변수 출력
+				}
+				break; // 홀수 && 3이상일때 정수 입력 x 멈춤
+			} else {// 짝수 && 3미만 일시
+				System.out.println("다시 입력하세요.");
+
 			}
-			
 		}
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+/*
+ * 문제 점
+ *  출력시 , 을 어떻게 출력해야할지 못함 
+ *	
+ */
+
 /*===============================[ 강사님 풀의 ]===============================*/	
 
 
