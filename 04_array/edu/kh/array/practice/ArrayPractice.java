@@ -292,14 +292,21 @@ public class ArrayPractice {
 	
 	public void ex8() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("정수 : ");
-		int input = sc.nextInt();
 		
-		for (int i = 0; i <= input; i++) {
+		while (true) {
+			System.out.print("정수 : ");
+		int input = sc.nextInt();
+		int[] arr = new int[input];
+		System.out.println(Arrays.toString(arr));//임시 확인용 인텍스 생성 테스트	
+		
+			if (input>=3 && input/2!=0) {//홀수 && 3이상일때 
+				System.out.println("테스트");//임시 확인용
 
-			if (input<3) {
-				System.out.println("");
+				 for (int i = 0; i < input; i++) {//정수 오름차순/내림차순 출력
+					
+				}
 			}
+			
 		}
 		
 		
