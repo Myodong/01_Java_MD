@@ -286,8 +286,9 @@ public class ArrayPractice {
 	정수 : 5
 	1, 2, 3, 2, 1
  */
-	//짝수 && 3미만  다시입력하세요 출력 후 다시 정수받기
-	//홀수 &&
+	// 짝수 && 3미만  다시입력하세요 출력 후 다시 정수받기
+	// 홀수 && 3이상 입력
+	// 입력된 정수의 오름차순으로 출력 중간 이후 내림차순으로 출력 
 	
 	public void ex8() {
 		Scanner sc = new Scanner(System.in);
