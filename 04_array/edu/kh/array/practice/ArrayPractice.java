@@ -332,7 +332,7 @@ public class ArrayPractice {
 	
 	[실행 화면]
 	발생한 난수 : 9 7 6 2 5 10 7 2 9 6 	
- */
+ */  
 	public void ex9() {
 	
 		int[] arr = new int[10];// 인덱스 0~9 생성
@@ -402,16 +402,18 @@ public class ArrayPractice {
 	
 	public void ex11() {
 		int[] arr = new int[10];// 인덱스 0~9 생성
-		
-		
+	
 		for (int i = 0; i < arr.length; i++) {
-			int ran=(int)(Math.random()*10+1);//1~10 사이 난수
-			
-			if (arr[i]==ran) {//중복아니면 저장
-				arr[i]=ran;
+			int ran = (int) (Math.random() * 10 + 1);// 1~10 사이 난수
+			arr[i] = ran;
+			for (int x = 0; x < i; x++) {
+				if (arr[x] == ran) {// 중복확인
+					i--;
+					break;
+				}
 			}
-			System.out.print(arr[i]+" ");
 		}
+		System.out.printf("%d %d %d %d %d %d %d %d %d %d",arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]);
 	}
 	
 	
@@ -423,6 +425,42 @@ public class ArrayPractice {
 
 
 /*#############################################################################*/	
+/*
+	로또 번호 자동 생성기 프로그램을 만들기.
+	(중복 값 없이 오름차순으로 정렬하여 출력하세요.)
+	
+	[실행 화면]
+	3 4 15 17 28 40 
+ */
+	public void ex12() {
+		int[] arr = new int[6];
+	
+		for (int i = 0; i < arr.length; i++) {
+			int ran = (int) (Math.random()*45+1);
+			arr[i] = ran;
+	
+			for (int x = 0; x < i; x++) {
+				if (arr[x] == ran) {
+					i--;
+					break;
+				}
+			}
+		}
+	
+		Arrays.sort(arr); // 오름차순
+	
+		System.out.printf("%d %d %d %d %d %d\n",arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
+	}
+	
+	
+	
+	
+	
+	
+/*===============================[ 강사님 풀의 ]===============================*/	
 
+
+/*#############################################################################*/	
+	
 	
 }
