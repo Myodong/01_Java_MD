@@ -16,7 +16,7 @@ public class Student {
 	
 	// 기본 생성자
 	public Student() { }
-	
+	  
 	// 매개변수 생성자 (오버로딩 적용)
 	public Student(int grade,int classRoom, int number,String name) { 
 		

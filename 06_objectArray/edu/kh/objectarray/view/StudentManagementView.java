@@ -23,7 +23,7 @@ public class StudentManagementView {
 	public void displayMenu() {
 		
 		int input = 0; // 메뉴 선택용 변수
-		
+		 
 		do {
 			System.out.println("----[학생 관리 프로그램]----");
 			System.out.println("1. 학생 추가");

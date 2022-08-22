@@ -15,7 +15,7 @@ public class StudentManagementService {
 		stdArr[1] = new Student(2, 3, 11, "박철수", 50, 100, 80);
 		stdArr[2] = new Student(1, 7, 3, "김미영", 100, 100, 30);
 		stdArr[3] = new Student(3, 8, 6, "장원영", 50, 70, 100);
-		
+		  
 	}
 	
 	/** 학생 추가 서비스 메서드
