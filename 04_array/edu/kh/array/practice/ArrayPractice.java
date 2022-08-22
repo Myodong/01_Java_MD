@@ -461,6 +461,53 @@ public class ArrayPractice {
 
 
 /*#############################################################################*/	
+/*실습문제13
+	문자열을 입력 받아 문자열에 어떤 문자가 들어갔는지 배열에 저장하고
+	문자의 개수와 함께 출력하세요. (중복 제거)
 	
+	[실행 화면]
+	문자열 : application
+	문자열에 있는 문자 : a, p, l, i, c, t, o, n
+	문자 개수 : 8
+ */
+	public void ex13() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 : ");
+		String input = sc.next();
+		char[] arr = new char[input.length()]; //입력받은 문자 개수만큼 인덱스 생성
+		int sum=0;
+		
+		System.out.print("문자열에 있는 문자 :");
+		for (int i = 0; i < arr.length; i++) {
+			char ch = input.charAt(i);
+			arr[i] = ch;
+			sum++;
+			
+			/*중복 검사 문제 있음*/
+			for (int x = 0; x < i; x++) {
+				if (arr[x] == ch) {// 중복확인
+//					i--;
+					break;
+				}else {
+					System.out.print(arr[i]+" ");
+					
+				}
+			
+			}
+			
+			
+		}
+		System.out.println();//줄바꿈 테스트
+		System.out.println(Arrays.toString(arr));// 임시 테스트
+		System.out.println("문자 개수 : "+sum);
+
+	}
+	
+	
+/*===============================[ 강사님 풀의 ]===============================*/	
+
+
+/*#############################################################################*/	
+
 	
 }
