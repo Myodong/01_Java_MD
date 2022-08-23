@@ -1,10 +1,10 @@
 package edu.kh.poly.ex1.model.vo;
 
 public class Spark extends Car{
-
-	private double discountOffer; // 할인 선택
 	
-	public Spark() {}
+	private double discountOffer; // 할인 혜택
+	
+	public Spark() { }
 
 	public Spark(int wheel, int seat, String fuel, double discountOffer) {
 		super(wheel, seat, fuel);
@@ -21,15 +21,14 @@ public class Spark extends Car{
 	
 	
 	@Override
-	public String toString () {
-		return super.toString()+" / 할인 : "+ discountOffer;
-	}
-	
-	public void dc(){
-		System.out.println(discountOffer);
+	public String toString() {
+		return super.toString() + " / 할인혜택 : " + discountOffer;
 	}
 	
 	
+	public void dc() {
+		System.out.println( discountOffer * 100 + "% 할인됩니다." );
+	}
 	
 	
 	
