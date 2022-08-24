@@ -16,12 +16,11 @@ public class ArrayPractice {
 */
 	public void ex1() {
 		int sum = 0;
-
+	
 		int[] arr = new int[9];
 		for (int i = 0; i < arr.length; i++) {
 			int num = arr[i] + i + 1;
 			System.out.print(num);
-
 	
 			if (i % 2 == 0) {
 				sum += num;
@@ -31,7 +30,21 @@ public class ArrayPractice {
 		System.out.println("짝수 번째 인덱스 합 : " + sum);
 	}
 /*===============================[ 강사님 풀의 ]===============================*/
-	
+	public void ex1_1() {
+        int[] arr = new int[9];
+
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+            System.out.print(arr[i] + " ");
+
+            if (i % 2 == 0) {
+                sum += arr[i];
+            }
+        }
+
+        System.out.println("\n짝수 번째 인덱스 합 : " + sum);
+	}
 	
 /*#############################################################################*/
 /*실습문제2
@@ -61,7 +74,21 @@ public class ArrayPractice {
 	}
 /*===============================[ 강사님 풀의 ]===============================*/
 	
-	
+	public void ex2_1() {
+		int[] arr = new int[9];
+
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = arr.length - i;
+            System.out.print(arr[i] + " ");
+
+            if (i % 2 == 1) {
+                sum += arr[i];
+            }
+        }
+
+        System.out.println("\n홀수 번째 인덱스 합 : " + sum);
+	}
 /*#############################################################################*/	
 /*실습문제3
 	사용자에게 입력 받은 양의 정수만큼 배열 크기를 할당하고
@@ -90,7 +117,17 @@ public class ArrayPractice {
 	}
 
 /*===============================[ 강사님 풀의 ]===============================*/	
-	
+	public void ex3_1() {
+		Scanner sc = new Scanner(System.in);
+
+        System.out.print("양의 정수 : ");
+        int[] arr = new int[sc.nextInt()];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+            System.out.print(arr[i] + " ");
+        }
+	}
 	
 /*#############################################################################*/
 /*실습문제4
@@ -133,7 +170,7 @@ public class ArrayPractice {
 	
 		for (int x = 0; x < arr.length; x++) {
 			if (arr[x] == num) {
-				System.out.println(x + "번째 인덱스에 존재합니다.");
+				System.out.println("인덱스" + x );
 				flag = false; // flag 값 변경 검색중지
 				break;
 			}
@@ -145,7 +182,31 @@ public class ArrayPractice {
 		
 	
 /*===============================[ 강사님 풀의 ]===============================*/	
+	public void ex4_1() {
+		Scanner sc = new Scanner(System.in);
 
+        int[] arr = new int[5];
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.printf("입력 %d : ", i);
+            arr[i] = sc.nextInt();
+        }
+
+        System.out.print("검색할 값 : ");
+        int search = sc.nextInt();
+
+        boolean flag = true;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == search) {
+                System.out.println("인덱스 : " + i);
+                flag = false;
+                break;
+            }
+        }
+
+        if (flag) System.out.println("일치하는 값이 존재하지 않습니다.");
+	}
 
 /*#############################################################################*/
 /*실습문제5
@@ -197,7 +258,49 @@ public class ArrayPractice {
 	
 	}
 /*===============================[ 강사님 풀의 ]===============================*/	
+	public void ex5_1() {
+		 // 1. 사용자에게 문자열과 문자 입력받기
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("문자열 : ");
+        String str = sc.nextLine();
+
+
+        // 2. 사용자가 입력한 문자열(str)을 문자 하나하나를 char배열에 넣기
+
+        // 먼저 사용자가 입력한 문자열 길이만큼의 char배열을 할당
+        char[] arr = new char[str.length()];
+
+        // 반복문을 통해 str.charAt(i) 값을 arr[i] 에 담는 과정
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = str.charAt(i);
+        }
+
+        System.out.print("문자 : ");
+        char ch = sc.nextLine().charAt(0);
+
+        // 3. 검색할 문자가 문자열에 몇개가 들어있는지와 어느 인덱스에 있는지 파악
+
+        int count = 0;    // 검색할 문자가 문자열에 몇개가 들어있는지를 세어줄 변수
+        // 문자열에서 동일한 문자가 발생할 때마다 1씩 증가
+
+        // 반복문 수행전 문자열 출력
+        System.out.print(str + "에 " + ch + "가 존재하는 위치(인덱스) : ");
+
+        // 인덱스마다 접근하기 위해 반복문 사용
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == ch) { // 해당 인덱스 값이 검색될 문자와 같을 경우
+                System.out.print(i + " ");    // 해당 인덱스 이어서 출력
+
+                count++;    // 그리고 count 1증가
+            }
+        }
+
+        // 위에서 print()를 사용했기 때문에 개행이 되어있지 않음
+        System.out.println();    // 줄바꿈
+
+        System.out.println(ch + "개수 : " + count);
+	}
 
 /*#############################################################################*/
 /*실습문제6
@@ -239,7 +342,32 @@ public class ArrayPractice {
 	
 
 /*===============================[ 강사님 풀의 ]===============================*/	
+	public void ex6_1() {
+		 // 1. 사용자에게 값을 입력받고 그 값만큼의 배열 선언 및 할당
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("정수 : ");
+        int num = sc.nextInt();
+
+        int[] arr = new int[num];
+
+        // 2. 그 배열의 크기만큼 사용자가 직접 값을 입력하여 각각의 인덱스에 값을 초기화
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("배열 " + i + "번째 인덱스에 넣을 값 : ");
+            arr[i] = sc.nextInt();
+        }
+
+
+        // 3. 전체 값 나열 및 총 합 출력
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+            sum += arr[i];
+        }
+
+        System.out.println();
+        System.out.println("총 합 : " + sum);
+	}
 
 /*#############################################################################*/
 /*실습문제7
@@ -271,7 +399,24 @@ public class ArrayPractice {
 	}
 
 /*===============================[ 강사님 풀의 ]===============================*/	
+	public void ex7_1() {
+		 Scanner sc = new Scanner(System.in);
 
+	        System.out.print("주민등록번호(-포함) : ");
+	        String input = sc.next();
+
+	        char[] arr = new char[input.length()];
+
+	        for (int i = 0; i < arr.length; i++) {
+
+	            if (i <= 7) { // 7번 인덱스 이하(생년월일, - , 성별)
+	                arr[i] = input.charAt(i);
+	            } else { // 8번 인덱스 이상부터는 *
+	                arr[i] = '*';
+	            }
+	            System.out.print(arr[i]);
+	        }
+	}
 
 /*#############################################################################*/
 /*실습문제8
@@ -325,7 +470,45 @@ public class ArrayPractice {
 
 /*===============================[ 강사님 풀의 ]===============================*/	
 
+public void ex8_1() {
+	  Scanner sc = new Scanner(System.in);
 
+      while (true) { // 3 이상의 수가 입력 될 때 까지 무한 반봅
+          // -> 3 이상이 입력되면 break문으로 종료
+
+          System.out.print("정수 : ");
+          int input = sc.nextInt();
+
+          if (input < 3 || input % 2 == 0) { // 3 미만 또는 짝수인 경우 -> 반복
+              System.out.println("다시 입력하세요.");
+
+          } else {
+              // 입력 받은 정수 만큼의 크기를 가지는 배열 생성
+              int[] arr = new int[input];
+
+              int num = 0; // arr 배열에 대입될 값
+
+              for (int i = 0; i < arr.length; i++) {
+                  if (i <= arr.length / 2) { // 중간 이전 까지 -> 증가
+                      arr[i] = ++num;
+
+                  } else { // 중간 이후 -> 감소
+                      arr[i] = --num;
+                  }
+
+                  // 출력 시 , 추가 (단, 마지막 제외)
+                  if (i == arr.length - 1) { // 마지막 바퀴
+                      System.out.print(arr[i]);
+
+                  } else {
+                      System.out.print(arr[i] + ", ");
+                  }
+
+              }
+              break; // while 반복 멈춤
+          }
+      }
+}
 /*#############################################################################*/	
 /*실습문제9
 	10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고,
@@ -348,7 +531,18 @@ public class ArrayPractice {
 	
 
 /*===============================[ 강사님 풀의 ]===============================*/	
+ public void ex9_1() {
+	 int[] arr = new int[10];
 
+     for(int i=0 ; i<arr.length ; i++){
+         arr[i] = (int)(Math.random() * 10 + 1);
+     }
+
+     System.out.print("발생한 난수 : ");
+     for(int i=0 ; i<arr.length ; i++){
+         System.out.print(arr[i] + " ");
+     }
+}
 
 /*#############################################################################*/	
 /*실습문제10
@@ -390,7 +584,37 @@ public class ArrayPractice {
 	
 	
 /*===============================[ 강사님 풀의 ]===============================*/	
+public void ex10_1() {
+	// 1. 10개의 값을 저장할 수 있는 정수형 배열 선언 및 할당
+    int[] arr = new int[10];
 
+    // 2. 각 인덱스에 1부터 10 사이의 난수를 발생시켜 초기화 후 출력
+    for(int i=0; i<arr.length; i++) {
+        arr[i] = (int)(Math.random() * 10 + 1);
+
+        System.out.print(arr[i] + " ");
+    }
+
+    System.out.println(); // 개행
+
+    // 3. 반복문을 통해 최대값 최소값 알아내기
+    int max = 1;  // 최소값을 담아줄 변수
+    int min = 10; // 최대값을 담아줄 변수
+
+    for(int i=0; i<arr.length; i++) {
+
+        if(arr[i] > max) { // 해당 인덱스의 값이 max 보다 큰 경우
+            max = arr[i]; // 해당 값을 max 변수에 담아줌
+        }
+
+        if(arr[i] < min) { // 해당 인덱스의  값이 min 보다 작은 경우
+            min = arr[i]; // 해당 값을 min 변수에 담아줌
+        }
+    }
+
+    System.out.println("최대값 : " + max);
+    System.out.println("최소값 : " + min);
+}
 
 /*#############################################################################*/	
 /* 실습문제11
@@ -424,7 +648,28 @@ public class ArrayPractice {
 	
 /*===============================[ 강사님 풀의 ]===============================*/	
 
+public void ex11_1() {
+	 // 1. 10개의 값을 저장할 수 있는 정수형 배열 선언 및 할당
+    int[] arr = new int[10];
 
+    // 2. 각 인덱스 값에 1부터 10 사이의 난수를 발생시키는데 이때 중복이 없도록
+    for(int i=0; i<arr.length; i++) {
+
+        arr[i] = (int)(Math.random() * 10 + 1);
+
+        for(int j=0; j<i; j++) { // 중복 제거
+            if(arr[i] == arr[j]) {
+                i--;
+                break;
+            }
+        }
+    }
+
+    // 3. 출력
+    for(int i=0; i<arr.length; i++) {
+        System.out.print(arr[i] + " ");
+    }
+}
 /*#############################################################################*/	
 /*실습문제12
 	로또 번호 자동 생성기 프로그램을 만들기.
@@ -459,7 +704,39 @@ public class ArrayPractice {
 	
 	
 /*===============================[ 강사님 풀의 ]===============================*/	
+public void ex12_1() {
+	 // 1. 크기가 6인 정수형 배열 선언 및 할당
+    int[] lotto = new int[6];
 
+    // 2. 배열에 중복값없이 1부터 45사이의 난수 초기화
+    for(int i=0; i<lotto.length; i++) {
+        lotto[i] = (int)(Math.random() * 45 + 1);
+
+        for(int j=0; j<i; j++) { // 중복 제거
+            if(lotto[i] == lotto[j]) {
+                i--;
+                break;
+            }
+        }
+    }
+
+    // 3. 오름차순 정렬(선택정렬)
+    for(int i=0; i<lotto.length-1; i++) { // 비교 주체
+        for(int j=i+1; j<lotto.length; j++) { // 비교 대상
+            if(lotto[i] > lotto[j]) { // 비교 주체가 비교 대상보다 큰 경우 값을 바꿔줘야됨
+
+                int temp = lotto[i];
+                lotto[i] = lotto[j];
+                lotto[j] = temp;
+            }
+        }
+    }
+
+    // 4. 출력
+    for(int i=0; i<lotto.length; i++) {
+        System.out.print(lotto[i] + " ");
+    }
+}
 
 /*#############################################################################*/	
 /*실습문제13
@@ -507,7 +784,51 @@ public class ArrayPractice {
 	
 /*===============================[ 강사님 풀의 ]===============================*/	
 
+public void ex13_1() {
+	   // 1. 사용자에게 문자열 입력받기
+    Scanner sc = new Scanner(System.in);
 
+    System.out.print("문자열 : ");
+    String str = sc.nextLine();
+
+    // 2. 해당 문자열의 문자들을 char[]에 담기
+    char[] arr = new char[str.length()];
+
+    for(int i=0; i<arr.length; i++) {
+        arr[i] = str.charAt(i);
+    }
+
+    // 3. char배열에서 중복값 존재할 경우 출력X,
+    int count = 0; // 문자 개수 카운트
+
+    System.out.print("문자열에 있는 문자 : ");
+
+    for(int i=0; i<arr.length; i++) {
+
+        boolean flag = true; // 중복 체크용 flag
+
+        for(int j=0; j<i; j++) {
+            if(arr[i] == arr[j]) {
+                flag = false; // 중복이발생했을 때
+                break;
+            }
+        }
+
+        if(flag) { // 중복이 발생하지 않았을 경우
+
+            if(i == 0) {
+                System.out.print(arr[i]);
+            }else {
+                System.out.print(", " + arr[i]);
+            }
+
+            count++;
+        }
+    }
+
+    System.out.println();
+    System.out.println("문자 개수 : " + count);
+}
 /*#############################################################################*/	
 
 	
