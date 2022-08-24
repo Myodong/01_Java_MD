@@ -22,12 +22,13 @@ public class ArrayPractice {
 			int num = arr[i] + i + 1;
 			System.out.print(num);
 
+	
 			if (i % 2 == 0) {
 				sum += num;
 			}
 		}
 		System.out.println();
-		System.out.println("짝수 번째 인덱스 합 : " + sum);	
+		System.out.println("짝수 번째 인덱스 합 : " + sum);
 	}
 /*===============================[ 강사님 풀의 ]===============================*/
 	

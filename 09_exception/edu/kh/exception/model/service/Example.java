@@ -130,14 +130,35 @@ public class Example {
 		//	  catch 구문 매개 변수의 자식 타입이면
 		//	  부모 타입 예외 참조 변수 = 던져진 자식 객체
 		//    -> 다형성 (업캐스팅)이 적용되어 해당 catch문에 처리된다
-		
-		
-		
-		
 	}
 	
 	
+	public void ex4() {
+		
+		System.out.println("실행");
+		
+		try {
+			ex5(); // throw new IOException();
 	
+		} catch (IOException e) {
+			e.printStackTrace();
+			// e : 예외 객체 참조 변수
+			// printStackTrace : 예외가 발생한 메서드 순서를 출력한다.
+			
+		} 
+		
+	}
+	public void ex5() throws IOException{
+		ex6(); // throw new IOException();
+		
+	}
+	public void ex6() throws IOException {
+		// -> 해당 메서드에서 발생하는 IOException을
+		//	  호출한 메서드로 던져버림 (책임전가)
+		
+		
+		throw new IOException();
+	}
 	
 	
 	
