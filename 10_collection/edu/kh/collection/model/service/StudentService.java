@@ -16,7 +16,8 @@ public class StudentService {
 		stdList.add(new Student("노성찬", 29, "경기도 읍네", 'M', 90));
 		stdList.add(new Student("이충재", 28, "마포구 영등포", 'M', 64));
 		stdList.add(new Student("최진경", 28, "경기도 일산", 'F', 100));
-		
+		stdList.add(new Student("이진경", 38, "경기도 일산", 'F', 100));
+
 		
 		
 	}
@@ -111,6 +112,58 @@ public class StudentService {
 		}
 		
 		
+	}
+
+
+
+	/** 일치하는 이름 검색
+	 * @param name
+	 * @return resultList
+	 */
+	public List<Student> selectStudent1(String name) {
+		
+		List<Student> resultList = new ArrayList<Student>();
+		
+		//향상된 for문
+		for (Student s : stdList) {
+			
+			// 검색한 이름과 학생 이름이 같은경우
+			if (s.getName().equals(name)) {
+				resultList.add(s);
+				
+			}
+		}
+		
+		return resultList;
+		
+		
+	}
+
+
+
+	/**
+	 * 포함하는 이름 검색
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public List<Student> selectStudent2(String name) {
+
+		List<Student> resultList = new ArrayList<Student>();
+
+		// 향상된 for문
+		for (Student s : stdList) {
+
+			// 검색한 이름이 학생 이름에 포함되어 있는 경우
+			if (s.getName().contains(name)) {
+				// String.contains(값)
+				// - 문자열에 값이 포함되어 있으면 True
+
+				resultList.add(s);
+			}
+		}
+
+		return resultList;
 	}
 	
 	
