@@ -79,7 +79,7 @@ public class Member {
 	// 1. 메서드(생성자) 이름이 같아야 한다.
 	// 2. 매개변수가 타입, 개수, 순서 중 하나라도 달라야 한다.
 	
-	public Member(String memberId,String memberPw){ 
+	public Member(String memberId,String memberPw){
 		// 매개변수 개수가 달라서 오버로딩 성립
 		
 	}
@@ -97,7 +97,7 @@ public class Member {
 	// - 생성자를 이용한 필드 초기화 구문의 중복을 없애고, 재사용성을 늘리기 위한 기능
 	// - 주의사항 : 반드시 생성자의 첫 줄에 작성 되어야 한다.
 	
-	public Member(int memberAge, String memberPhone) {
+	public Member(int memberAge, String memberPhone) { 
 		
 		// 전달 받은 매개변수로 현재 객체 필드 초기화
 		this.memberAge = memberAge;
