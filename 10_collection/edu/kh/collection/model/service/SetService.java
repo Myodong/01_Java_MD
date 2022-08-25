@@ -171,6 +171,7 @@ public class SetService {
 		
 		// Auto UnBoxing (자동 포장 해제)
 		int i2 = i1; // int = Integer
+					 // int = Integer.intValue();   (int)
 		
 		System.out.println(i1.intValue()  );
 		
