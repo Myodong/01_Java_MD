@@ -42,11 +42,11 @@ public class MethodExampleView {
 			// 1이 입력 되었을때 servuce가 참조하는 객체의 method1() 메서드 호출
 			case 1:service.method1(); break;
 //			case 2:service.method2(10, 20, 30); break; // 이렇게도 사용가능 
-			case 2:this.meun2(); // 현재 객체가 가지고 있는 meun2() 매서드 호출
-			break;
+			case 2:this.meun2(); break;// 현재 객체가 가지고 있는 meun2() 매서드 호출
+			
 			case 3:String result = service.method3(); // method3()호출 후 String 값을 변환 받고 그 값을 result 변수에 저장 
-					System.out.println(result);
-			break;
+					System.out.println(result);break;
+			
 			case 4:this.meun4(); break;
 			case 0: System.out.println("프로그램 종료"); break;
 			default: System.out.println("잘못 입력하셨습니다.");

@@ -48,7 +48,7 @@ public class MethodExampleService {
 		str+="삼겹살이 먹고싶네요\n";
 		
 		return str;
-		// return : 현재 매세더를 종료하고 매서드 호출부로 돌아감.
+		// return : 현재 메서드를 종료하고 메서드 호출부로 돌아감.
 		
 		// return 값 : 현재 메서드를 종료하고 값을 가지고 메서드 호출부로 돌아감.	
 	}
