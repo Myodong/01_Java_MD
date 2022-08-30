@@ -1,3 +1,5 @@
+package array;
+
 public class ProblemExampleRun {
 
 	public static void main(String[] args) {
