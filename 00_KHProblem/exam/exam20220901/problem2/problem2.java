@@ -21,11 +21,11 @@ public class problem2 {
 
 		}
 		if (result) { 
-			System.out.println("11111111111회원이 존재합니다.");
+			System.out.println("회원이 존재합니다.");
 			
 			
 		}else {
-			System.out.println("2222222회원이 존재하지 않습니다.");
+			System.out.println("회원이 존재하지 않습니다.");
 		}
 	}
 
