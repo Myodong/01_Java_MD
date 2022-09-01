@@ -60,12 +60,11 @@ public class Example {
 		Person p1 = new Person("홍길동", 15);
 		Student s1 = new Student("김학생", 17, 1, 5);
 		
-		p1.introduce();
+		p1.introduce();// Person 상속 받음
 		
 		System.out.println("-----------------");
 		
-		s1.introduce();
-		// Person 상속 받음
+		s1.introduce();// Student 상속 받음
 		// -> 오버라이딩 진행 시 Student의 메서드로 인식됨
 		
 		
