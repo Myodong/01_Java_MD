@@ -15,7 +15,6 @@ public class CalculatorV2 extends Calculator{
 	}
 //	@Override 문제 해결 방법 오버라이딩
 //	public int minus(int num1, int num2) {
-//		// TODO Auto-generated method stub
 //		return 0;
 //	}
 }
