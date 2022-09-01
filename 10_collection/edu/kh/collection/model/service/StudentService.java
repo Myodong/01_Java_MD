@@ -96,7 +96,7 @@ public class StudentService {
 	 * @param idx
 	 */
 	public Student removeStudent(int idx) {
-		
+		 
 		// 일치하는 인덱스가 있으면
 		// 해당 학생 정보를 stdList에서 제거하고
 		// 제거된 학생 정보를 반환
