@@ -20,8 +20,7 @@ public class ServerService {
 		
 		InputStream is =null;
 		OutputStream os = null;
-		BufferedReader
-		br = null;
+		BufferedReader br = null;
 		PrintWriter pw =null;
 		try {
 			serverSocket = new ServerSocket(port);
