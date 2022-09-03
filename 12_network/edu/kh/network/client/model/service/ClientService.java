@@ -17,21 +17,21 @@ public class ClientService {
 		// 1) 서버의 IP주소와 서버가 정한 포트번호를 매개변수로 하여 
 		//   클라이언트용 소켓 객체 생성
 		
-		String serverIP = "127.0.0.1"; // loop back IP(현재 컴퓨터를 나타내는 IP)
+		String serverIp = "127.0.0.1"; // loop back IP(현재 컴퓨터를 나타내는 IP)
 		int port = 8500;
 		
-		Socket clientSocket = null;
+		Socket clientSocket =null;
 		
 		InputStream  is = null;
 		OutputStream os = null;
 		
-		BufferedReader br = null;
-		PrintWriter    pw = null;
+		BufferedReader br =null;
+		PrintWriter pw = null;
 		
 		try {
 			System.out.println("[Client]");
 			
-			clientSocket = new Socket(serverIP, port);
+			clientSocket = new Socket(serverIp, port);
 			// UnknownHostException : IP가 잘못 되었을 때 발생하는 예외
 			
 			// 2) 서버와의 입출력 스트림 오픈

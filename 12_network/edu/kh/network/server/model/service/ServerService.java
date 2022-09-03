@@ -47,14 +47,14 @@ public class ServerService {
 		// (단, 1023번 이하는 이미 사용중인 경우가 많으니 피하는게 좋다)
 		
 		
-		ServerSocket serverSocket = null;
-		Socket clientSocket = null;
+		ServerSocket serverSocket =null;
+		Socket clientSocket =null;
 		
-		InputStream  is = null;
+		InputStream is =null;
 		OutputStream os = null;
 		
 		BufferedReader br = null;
-		PrintWriter    pw = null;
+		PrintWriter pw =null;
 		
 		
 		try {
