@@ -19,7 +19,7 @@ public class Spark extends Car{
 		this.discountOffer = discountOffer;
 	}
 	
-	
+	 
 	@Override
 	public String toString() {
 		return super.toString() + " / 할인혜택 : " + discountOffer;
